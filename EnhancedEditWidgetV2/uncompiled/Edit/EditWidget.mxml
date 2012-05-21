@@ -1058,7 +1058,6 @@
 			public var flayerOIDs:ArrayCollection = new ArrayCollection();
 			public var flsArr:ArrayCollection = new ArrayCollection();
 			public var features:ArrayCollection;	
-			public var fLayer:FeatureLayer;
 			//// BK end add	
 			
             private function featureLayer_selectionComplete(event:FeatureLayerEvent):void
@@ -1104,15 +1103,11 @@
 							if (oidsarr.contains(item.attributes.objectid))
 							{ // disable editing if feature has been selected before
 								disableEditing();
-//								editor.updateAttributesEnabled = false;
-//								editor.updateGeometryEnabled = false;
-//								editor.deleteEnabled = false;
 							}else{ // otherwise enable editing
 								editor.updateAttributesEnabled = true;
 								editor.updateGeometryEnabled = true;
 								editor.deleteEnabled = true;
 							}
-//							map.infoWindow.addEventListener(FlexEvent.HIDE,setValues);
 							break
 						}else{trace("no item");}
 					}
