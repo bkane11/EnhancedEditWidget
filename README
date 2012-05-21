@@ -1,0 +1,3 @@
+This modification of the EditWidget for FlexViewer 3.0 allows FeatureLayer feature attributes and geometry to be updated and deleted only if the selected feature has been added during the user session.  Features already in the FeatureLayer at the time the layer is loaded to the map are not editable, only an information popup will show if clicked.  Prevents users from editing or deleting content that was not created by them, so maintains FeatureLayer integrity.
+
+The deletefeatures, updateattributes, and updategeometry values are maintained as false if they are set as such in the EditWidget.xml, but setting these tags to true or leaving them unset results in the editing behavior described above.
